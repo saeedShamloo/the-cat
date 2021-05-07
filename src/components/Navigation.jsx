@@ -24,9 +24,7 @@ export default function Navigation() {
   const fetchCat = (id) =>
     dispatch(loadCats({ category_ids: id }, fetchErrorHandler));
 
-  const logo = (
-    <img src="https://www.devolon.fi/wp-content/uploads/2020/09/Devolon-logopurple.png" />
-  );
+  const logo = <img src="logo.png" alt="logo" />;
 
   return <Sidebar logo={logo} items={categories} onItemClick={fetchCat} />;
 }
